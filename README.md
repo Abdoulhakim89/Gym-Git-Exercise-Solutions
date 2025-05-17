@@ -65,5 +65,82 @@ Deleted branch test (was 37068f1).
 ```
 ### Exercise 2
 ```git
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (dev)
+$ touch home.html
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (dev)
+$ git stash
+Saved working directory and index state WIP on dev: 37068f1 initialized new local git repo
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (dev)
+$ touch about.html
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (dev)
+$ git stash
+No local changes to save
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (dev)
+$ touch team.html
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (dev)
+$ git add about.html
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (dev)
+$ git stash
+Saved working directory and index state WIP on dev: 37068f1 initialized new local git repo
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (dev)
+$ git add home.html
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (dev)
+$ git stash
+Saved working directory and index state WIP on dev: 37068f1 initialized new local git repo
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (dev)
+$ git add team.html
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (dev)
+$ git stash
+Saved working directory and index state WIP on dev: 37068f1 initialized new local git repo
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (dev)
+$ git stash list
+stash@{0}: WIP on dev: 37068f1 initialized new local git repo
+stash@{1}: WIP on dev: 37068f1 initialized new local git repo
+stash@{2}: WIP on dev: 37068f1 initialized new local git repo
+stash@{3}: WIP on dev: 37068f1 initialized new local git repo
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (dev)
+$ git stash apply stash@{2}
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (dev)
+$ git stash apply stash@{1}
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (dev)
+$ git stash apply stash@{3}
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
 
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (dev)
+$ git add .
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (dev)
+$ git commit -m 'stashed and popped about, home and restored the readme changes'
+[dev 626df5e] stashed and popped about, home and restored the readme changes
+ 3 files changed, 85 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+ User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (dev)
+$ git stash apply stash@{0}
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (dev)
+$ git reset
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (dev)
+$ git reset --hard
+HEAD is now at 626df5e stashed and popped about, home and restored the readme changes
 ```
