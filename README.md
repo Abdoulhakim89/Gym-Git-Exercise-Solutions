@@ -194,3 +194,138 @@ To https://github.com/Abdoulhakim89/Gym-Git-Exercise-Solutions.git
  * [new branch]      ft/bundle-2 -> ft/bundle-2
 branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
 ```
+### Exercise 2
+```git
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (main)
+$ git switch main
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (main)
+$ git branch ft/services-redisign
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (main)
+$ git switch ft/services-redisign
+Switched to branch 'ft/services-redisign'
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/services-redisign)
+$ git branch -m ft/services-redesign
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/services-redesign)
+$ git add .
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/services-redesign)
+$ git commit -m 'Changes on services.html, new branch created'
+[ft/services-redesign bba8ed2] Changes on services.html, new branch created
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/services-redesign)
+$ git push
+fatal: The current branch ft/services-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/services-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/services-redesign)
+$  git push --set-upstream origin ft/services-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 374 bytes | 93.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/services-redesign' on GitHub by visiting:
+remote:      https://github.com/Abdoulhakim89/Gym-Git-Exercise-Solutions/pull/new/ft/services-redesign
+remote:
+To https://github.com/Abdoulhakim89/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/services-redesign -> ft/services-redesign
+branch 'ft/services-redesign' set up to track 'origin/ft/services-redesign'.
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/services-redesign)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (main)
+$ git add .
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (main)
+$ gi  commit -m 'Added changes on the main branch different to ft/services redesign'
+bash: gi: command not found
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (main)
+$ git  commit -m 'Added changes on the main branch different to ft/services redesign'
+[main 1c160c3] Added changes on the main branch different to ft/services redesign
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 412 bytes | 103.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Abdoulhakim89/Gym-Git-Exercise-Solutions.git
+   87c4952..1c160c3  main -> main
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (main)
+$ git checkout ft/services-redesign
+Switched to branch 'ft/services-redesign'
+Your branch is up to date with 'origin/ft/services-redesign'.
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/services-redesign)
+$ git diff main
+diff --git a/services.html b/services.html
+index d54f4d9..dc01a6d 100644
+--- a/services.html
++++ b/services.html
+@@ -8,12 +8,11 @@
+ <body>
+     <h1>Our services</h1>
+     <ul>
+-        <li>Corporate monitoring</li>
++        <li>Civil Engeneering</li>
+         <li>Business consultants</li>
+-        <li>Employee training</li>
+         <li>Car Rental</li>
+-        <li>Auditing services</li>
+-        <li>Online Degrees</li>
++        <li>Car wash</li>
++        <li>Barister training</li>
+     </ul>
+ </body>
+ </html>
+\ No newline at end of file
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/services-redesign)
+$ git merge main
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/services-redesign|MERGING)
+$ git add .
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/services-redesign|MERGING)
+$ git commit -m 'Resolved conflicts on ft/services-redesign; accepted incoming changes from main'
+[ft/services-redesign ee9c563] Resolved conflicts on ft/services-redesign; accepted incoming changes from main
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/services-redesign)
+$ git push
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 264 bytes | 132.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Abdoulhakim89/Gym-Git-Exercise-Solutions.git
+   bba8ed2..ee9c563  ft/services-redesign -> ft/services-redesign
+
+```
