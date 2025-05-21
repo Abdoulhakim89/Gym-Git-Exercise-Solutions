@@ -329,3 +329,246 @@ To https://github.com/Abdoulhakim89/Gym-Git-Exercise-Solutions.git
    bba8ed2..ee9c563  ft/services-redesign -> ft/services-redesign
 
 ```
+## Bundle 3
+
+### Exercise 1
+```git
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (main)
+$ git branch ft/team-page
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (main)
+$ git switch ft/team-page
+Switched to branch 'ft/team-page'
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/team-page)
+$ touch team.html
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/team-page)
+$ git add .
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/team-page)
+$ git commit -m 'Created new branch & made changes to the team.html file'     
+[ft/team-page 19555ea] Created new branch & made changes to the team.html file 1 file changed, 23 insertions(+), 15 deletions(-)
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/team-page)
+$ git push
+fatal: The current branch ft/team-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/team-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/team-page)
+$ git push --set-upstream origin ft/team-page
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 537 bytes | 107.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:       
+remote:      https://github.com/Abdoulhakim89/Gym-Git-Exercise-Solutions/pull/new/ft/team-page
+remote:
+To https://github.com/Abdoulhakim89/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/team-page)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (main) 
+$ git branch ft/contact-page
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (main) 
+$ git switch ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/team-page)
+$ git log
+commit 19555ea21df4207a35e9dacab3ed0cba82586e2c (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Abdulhakim <abdoulbeast89@gmail.com>
+Date:   Wed May 21 10:47:18 2025 +0200
+
+    Created new branch & made changes to the team.html file
+
+commit 1a2893486da4b0c06dbd8ec55cbf64698892f78d (origin/main, main, ft/contact-page)
+Author: Abdulhakim <abdoulbeast89@gmail.com>
+Date:   Wed May 21 10:26:30 2025 +0200
+
+    Added exercise 2 commands to the Readme file
+
+commit 1c160c386048d1c9551008356f45d7aa225ff5b3
+Author: Abdulhakim <abdoulbeast89@gmail.com>
+Date:   Wed May 21 10:09:22 2025 +0200
+
+    Added changes on the main branch different to ft/services redesign        
+
+commit 87c495206848b905e49ed5b55392305aae8fbbce
+Merge: 37068f1 6bb8921
+Author: Abdoulhakim89 <abdoulbeast89@gmail.com>
+Date:   Wed May 21 09:55:37 2025 +0200
+
+    Merge pull request #2 from Abdoulhakim89/ft/bundle-2
+
+    Ft/bundle 2
+
+commit 6bb8921066a8da039daa71456c8842cdcbe3e2e4 (origin/ft/bundle-2)
+Author: Abdulhakim <abdoulbeast89@gmail.com>
+Date:   Mon May 19 15:20:42 2025 +0200
+
+    added the terminal commands to the README file
+
+commit a98094ffe23bbd4e0d2930d38ca4039dc2b17c83
+Author: Abdulhakim <abdoulbeast89@gmail.com>
+Date:   Mon May 19 15:11:33 2025 +0200
+
+    Added a new feature in services.html
+
+commit 612bb3ff485a2c06999e0183edbe2f7d973e6c42 (origin/dev, dev)
+Author: Abdulhakim <abdoulbeast89@gmail.com>
+Date:   Sat May 17 11:56:41 2025 +0200
+
+    Wrapping up with the first bundle of exercises
+
+commit 626df5efdffa4cded35fd708a3b74d6134543d5d
+Author: Abdulhakim <abdoulbeast89@gmail.com>
+Date:   Sat May 17 11:36:33 2025 +0200
+
+    stashed and popped about, home and restored the readme changes
+
+commit 37068f1f4c94da338b35f6e0689e6251516186fb
+Author: Abdulhakim <abdoulbeast89@gmail.com>
+Date:   Sat May 17 11:08:44 2025 +0200
+
+    initialized new local git repo
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/contact-page)
+$ git cherry-pick 19555ea21df4207a35e9dacab3ed0cba82586e2c
+[ft/contact-page 9673f67] Created new branch & made changes to the team.html file
+ Date: Wed May 21 10:47:18 2025 +0200
+ 1 file changed, 23 insertions(+), 15 deletions(-)
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/contact-page)
+$ git add .
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/contact-page)
+$ git commit -m 'Created the contact page and added some data after cherry pick'
+[ft/contact-page 3bb7a1d] Created the contact page and added some data after cherry pick
+ 1 file changed, 5 insertions(+)
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/contact-page)
+$ git push
+fatal: The current branch ft/contact-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/contact-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/contact-page)
+$ git push --set-upstream origin ft/contact-page
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 868 bytes | 144.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:    
+remote:      https://github.com/Abdoulhakim89/Gym-Git-Exercise-Solutions/pull/new/ft/contact-page
+remote:
+To https://github.com/Abdoulhakim89/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/contact-page)
+$ git branch ft/faq-page
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/contact-page)
+$ git switch ft/faq-page
+Switched to branch 'ft/faq-page'
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/faq-page)
+$ touch faq.html
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/faq-page)
+$ start faq.html
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/faq-page)
+$ git add .
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/faq-page)
+$ git commit -m 'Created the FAQ page and added some content'
+[ft/faq-page 933358c] Created the FAQ page and added some content
+ 1 file changed, 14 insertions(+)
+ create mode 100644 faq.html
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/faq-page)
+$ git push
+fatal: The current branch ft/faq-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/faq-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/faq-page)
+$ git push --set-upstream origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 521 bytes | 10.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:        
+remote:      https://github.com/Abdoulhakim89/Gym-Git-Exercise-Solutions/pull/new/ft/faq-page
+remote:
+To https://github.com/Abdoulhakim89/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/faq-page)
+$ git revert 19555ea21df4207a35e9dacab3ed0cba82586e2c
+Auto-merging team.html
+CONFLICT (content): Merge conflict in team.html
+error: could not revert 19555ea... Created new branch & made changes to the team.html file
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git revert --continue".
+hint: You can instead skip this commit with "git revert --skip".
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Deskt"git revert",op/git-basic-exercises (ft/faq-page|REVERTING)  
+$ git commit -m 'reverted the changes on hash: 1ce.mergeConflict false"9555ea21df4207a35e9dacab3ed0cba82586e2c'        
+[ft/faq-page cf78649] reverted the changes on haop/git-basic-exercises (ft/faq-page|REVERTING)sh: 19555ea21df4207a35e9dacab3ed0cba82586e2c    9555ea21df4207a35e9dacab3ed0cba82586e2c'
+ 1 file changed, 1 insertion(+), 1 deletion(-)  sh: 19555ea21df4207a35e9dacab3ed0cba82586e2c
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/faq-page)            op/git-basic-exercises (ft/faq-page)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 318 bytes | 63.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Abdoulhakim89/Gym-Git-Exercise-Solutions.git
+   933358c..cf78649  ft/faq-page -> ft/faq-page
+```
