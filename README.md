@@ -572,3 +572,88 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/Abdoulhakim89/Gym-Git-Exercise-Solutions.git
    933358c..cf78649  ft/faq-page -> ft/faq-page
 ```
+### Exercise 2
+```git
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/f-page)
+$ git branch ft/home-page-redesign
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/f-page)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (main
+$ git add .
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (main
+$ git commit -m 'Made changes to the team.html in main branch'
+[main 71f2466] Made changes to the team.html in main branch
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (main
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 325 bytes | 108.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Abdoulhakim89/Gym-Git-Exercise-Solutions.git
+   1d7c073..71f2466  main -> main
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (main
+$ git switch ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/he-page-redesign)
+$ git rebase main
+Auto-merging team.html
+CONFLICT (content): Merge conflict in team.html
+error: could not apply 9673f67... Created new branch & made changes to the tm.html file
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebas
+hint: Disable this message with "git config advice.mergeConflict false"
+Could not apply 9673f67... Created new branch & made changes to the team.htm
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/h
+$ git rebase --continue
+fatal: no rebase in progress
+page'
+[ft/home-page-redesign 37de76c] added navigation to the home page
+ 1 file changed, 10 insertions(+)
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/home-page-redesign)
+$ git
+$ git push
+fatal: The current branch ft/home-page-redesign has no upstream branch.     
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/home-page-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/home-page-redesign)
+$ git push --set-upstream origin ft/home-page-redesign
+Enumerating objects: 22, done.
+Counting objects: 100% (22/22), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (18/18), 4.20 KiB | 478.00 KiB/s, done.
+Total 18 (delta 8), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (8/8), completed with 2 local objects.       
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/Abdoulhakim89/Gym-Git-Exercise-Solutions/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/Abdoulhakim89/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/home-page-redesign)
+```
