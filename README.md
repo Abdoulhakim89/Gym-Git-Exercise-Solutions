@@ -329,3 +329,49 @@ To https://github.com/Abdoulhakim89/Gym-Git-Exercise-Solutions.git
    bba8ed2..ee9c563  ft/services-redesign -> ft/services-redesign
 
 ```
+
+## Bundle 4
+### Exercise 1
+
+```git
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (main)
+$ git remote add git-copy https://github.com/Abdoulhakim89/git-copy.git
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (main)
+$ git add .
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (main)
+$ git commit -m 'Added a new remote repo called git-copy'
+[main 43b454c] Added a new remote repo called git-copy
+ 1 file changed, 2 insertions(+)
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 397 bytes | 132.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Abdoulhakim89/Gym-Git-Exercise-Solutions.git
+   71f2466..43b454c  main -> main
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (main)
+$ git push git-copy main
+Enumerating objects: 35, done.
+Counting objects: 100% (35/35), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (35/35), done.
+Writing objects: 100% (35/35), 6.60 KiB | 177.00 KiB/s, done.
+Total 35 (delta 16), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (16/16), done.
+To https://github.com/Abdoulhakim89/git-copy.git
+ * [new branch]      main -> main
+
+```
