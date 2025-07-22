@@ -373,5 +373,8 @@ Total 35 (delta 16), reused 0 (delta 0), pack-reused 0 (from 0)
 remote: Resolving deltas: 100% (16/16), done.
 To https://github.com/Abdoulhakim89/git-copy.git
  * [new branch]      main -> main
+```
+### Exercise 2
+```
 
 ```
