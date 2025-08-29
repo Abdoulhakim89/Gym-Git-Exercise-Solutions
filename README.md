@@ -373,5 +373,112 @@ Total 35 (delta 16), reused 0 (delta 0), pack-reused 0 (from 0)
 remote: Resolving deltas: 100% (16/16), done.
 To https://github.com/Abdoulhakim89/git-copy.git
  * [new branch]      main -> main
+```
+### Exercise 2
+```
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (main)
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
 
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/footer)
+$ touch footer.html
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/footer)
+$ git add .
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/footer)
+$ git commit -m "Added a heading one to in the footer section"
+[ft/footer 003e0d9] Added a heading one to in the footer section
+ 2 files changed, 14 insertions(+)
+ create mode 100644 footer.html
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/footer)
+$ git add .
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/footer)
+$ git commit -m "Added lists for contacts"
+[ft/footer 24c4885] Added lists for contacts
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/footer)
+$ git push
+fatal: The current branch ft/footer has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/footer
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/footer)
+$ git push --set-upstream origin ft/footer
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 854 bytes | 56.00 KiB/s, done.
+Total 7 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/Abdoulhakim89/Gym-Git-Exercise-Solutions/pull/new/ft/footer
+remote:
+To https://github.com/Abdoulhakim89/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/footer)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (main)
+$ git checkout -b ft/squashing
+Rename from 'C:/Users/User/OneDrive/Desktop/git-basic-exercises/.git/HEAD.lock' to 'C:/Users/User/OneDrive/Desktop/git-basic-exercises/.git/HEAD' failed. Should I try again? (y/n) y
+Switched to a new branch 'ft/squashing'
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/squashing)
+$ git merge --squash ft/footer
+Updating 9c9c773..24c4885
+Fast-forward
+Squash commit -- not updating HEAD
+ README.md   |  3 +++
+ footer.html | 14 ++++++++++++++
+ 2 files changed, 17 insertions(+)
+ create mode 100644 footer.html
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/squashing)
+$ git commit -a -m "Squashing footer branch changes"
+[ft/squashing b49f0a3] Squashing footer branch changes
+ 2 files changed, 17 insertions(+)
+ create mode 100644 footer.html
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/squashing)
+$ git push
+fatal: The current branch ft/squashing has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/squashing
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+User@ABDUL-HAKIM-MUHOZI MINGW64 ~/OneDrive/Desktop/git-basic-exercises (ft/squashing)
+$ git push --set-upstream origin ft/squashing
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 581 bytes | 96.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/Abdoulhakim89/Gym-Git-Exercise-Solutions/pull/new/ft/squashing
+remote:
+To https://github.com/Abdoulhakim89/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/squashing -> ft/squashing
+branch 'ft/squashing' set up to track 'origin/ft/squashing'.
 ```
